@@ -17,6 +17,10 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
+console.log("Private Key Exists:", !!process.env.FIREBASE_PRIVATE_KEY);
+console.log("Client Email:", process.env.FIREBASE_CLIENT_EMAIL);
+console.log("Project ID:", process.env.FIREBASE_PROJECT_ID);
+
 
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
